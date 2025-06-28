@@ -89,7 +89,8 @@ After=graphical.target
 
 [Service]
 ExecStart=$(which sxhkd)
-Restart=always
+Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy=default.target
